@@ -1,8 +1,9 @@
-$primary-bg: #021a23;
-$accent-blue: #98ccde;
-$accent-light: #e7f3fa;
-$primary-red: #db2f2e;
-$text-dark: #222;
+$primary-bg: #011827;
+$accent-blue: #8ACFE5;
+$accent-light: #B6BDB5;
+$primary-red: #E3170A;
+$shadow-blue: #36769D;
+$text-dark: #011827;
 $text-light: #fff;
 $text-muted: #afbac1;
 $box-radius: 12px;
@@ -10,7 +11,7 @@ $box-radius: 12px;
 body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #f5f8fa;
+  background: #fff;
   color: $text-dark;
 }
 
@@ -95,24 +96,19 @@ body {
 }
 }
   
-
-
-// TESTIMONIALS: Grid for single card only
+// TESTIMONIALS
 .testimonials {
   display: flex;
-
 }
   .testimonial__content {
     display: grid;
     gap: 2px;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto auto;
-    justify-items: center;
-    
+    justify-items: center;  
     border-radius: $box-radius;
     padding: 17px 12px 12px 12px;
     margin: 0 14px 16px 14px;
-
     img.testimonials_image {
       width: 72px;
       height: 72px;
@@ -131,7 +127,6 @@ body {
       margin: 0 0 6px 20px;
       grid-row: 1;
       grid-column: 2;
-
     }
     .testimonials__quote__date {
       color: $primary-bg;
@@ -147,8 +142,7 @@ body {
     display: none;
   }
 
-
-// CHALLENGES: Main grid for list, grid per card
+// CHALLENGES
 .challenges {
   margin-top: 40px;
   gap:0;
@@ -160,11 +154,9 @@ body {
     color: $primary-bg;
     font-weight: 400;
   }
-  // Grid for challenge "cards"
   .challenges__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    
     margin: 0 12px 40px 40px;
     .challenge-tile {
       display: grid;
@@ -179,7 +171,6 @@ body {
       img {
         width: 100%;
         border-radius: 6px 6px 0 0;
-     
         object-fit: contain;
         grid-row: 1;
       }
@@ -199,17 +190,12 @@ body {
       }
       .challenge-tile__rating {
         font-size: 22px;
-        
-
         color: #e14000;
       }
-      .challenge-tile__participants {
-        
+      .challenge-tile__participants { 
         color: $text-muted;
         font-size: 14px;
         justify-self: center;
-
-
       }
       .challenge-tile__description {
         grid-row: 4;
@@ -234,7 +220,6 @@ body {
       }
     }
   }
-  // Grid for action buttons
  .challenges_mainbuttons {
     display: flex;
     flex-direction: column;
@@ -270,8 +255,9 @@ body {
         font-size: 0.7rem;
         font-weight: 400;
         flex: 1 1 auto;
+    }
   }
-}}
+}
 
 // STORY
 .story {
@@ -279,9 +265,7 @@ body {
   background: $primary-bg;
   color: $text-light;
   padding: 26px 12px 20px 12px;
- 
   height: 500px;
-  
     .story--content_text {
       font-size: 1.7em;
       text-align: center;
@@ -300,18 +284,15 @@ body {
       padding: 0 0;
       font-size: 1.01rem;
       margin: 0 70px;
-     
       text-align: center;
     }
 }
 
-
-// CALL TO ACTION as grid
+// CALL TO ACTION 
 .calltoaction {
   display: block;
   padding: 0 0 12px 0;
-  .calltoaction_onsite, .calltoaction_allchallenge {
-    
+  .calltoaction_onsite, .calltoaction_allchallenge {  
     background: #fff;
     border-radius: $box-radius;
     img {
@@ -395,6 +376,300 @@ body {
             font-size: 0.97rem;
             &:hover { text-decoration: underline; }
           }
+        }
+      }
+    }
+  }
+}
+
+// _mediaqueries.scss
+
+// 900px+
+@media (min-width: 900px) {
+  body {
+    font-size: 1.07em;
+    line-height: 1.5;
+  }
+
+  // HEADER
+  .header {
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    .header--main {
+      grid-row: 1;
+      height: auto;
+      display: grid;
+      grid-template-columns: 15% 45% 45%;
+      gap: 0px;
+      padding: 0 0 0 0 ;
+      margin: 10px 10px 10px 10px;
+      align-items: end;
+      .header__logo {
+        width: 128px;
+          height: 82px;
+          margin-left: 20px;
+        img {
+          height: 100%;
+        }
+      }
+      .header--main--title {
+        height: 47px;
+      }
+      gap: 26px;
+      .header--main--title {
+        font-size: 2.15rem;
+      }
+    }
+    .header__nav {
+      grid-row: 2;
+      height: 108px;
+      display: flex;
+      align-content: center;
+      align-items: center;  
+      ul {   
+        display: grid;
+        gap: 35px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0 auto;
+        width: 60%;
+        li {
+          display: flex;
+          margin: 0 20px 0 20px;
+          width: 100%;
+          a {
+            font-size: 1.11rem;
+            padding: 7px 2px;
+            width: 100%;
+            color: $text-light;
+            border: none;
+            background: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            &:hover, &:focus { 
+              color: $accent-blue;
+              text-decoration: underline;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // HERO
+  .hero {
+    position: relative;
+    margin-bottom: 0;  
+    .hero__image {
+      margin: 0;
+      width: 100%;
+      img {
+        width: 100%;
+        box-shadow: 0 2px 24px rgba(78,134,164,0.13);
+        object-fit: cover;
+        display: block;
+      }
+    }
+    .hero_buttons {
+      position: absolute;
+      margin: 0;
+      left:50%;
+      bottom: -20px;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      .hero__button--primary,
+      .hero__button--secondary {     
+        width: 220px;
+        margin-bottom: 0;
+        margin-right: 24px;
+        font-size: 1.13rem;
+        padding: 15px 0;
+        box-shadow: 0 2px 7px rgba(0,60,120,0.09);
+      }
+      .hero__button--primary { 
+        order: 0;
+        background: $primary-red;
+        color: $text-light;
+        text-decoration: none;
+      }
+      .hero__button--secondary { 
+        order: 1;
+      }
+    }
+  }
+
+  // TESTIMONIALS 
+  .testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px 0 34px 0;
+    .testimonial__content {  
+      img.testimonials_image {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 0;
+      }
+      .testimonials__quote {
+        font-size: 1.21rem;
+        margin: 0;
+      }
+      .testimonials__quote__date {
+        font-size: 0.95rem;
+        margin-left: 0;
+      }
+    }
+    .testimonial__content ~ .testimonial__content {
+      display: grid;
+    }
+  }
+
+  // CHALLENGES
+  .challenges {
+    padding: 0 60px;
+    .challenges__title {
+      font-size: 2.1rem;
+      margin: 16px 0 44px 0;
+    }
+    .challenges__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 0 0 40px 0;
+      .challenge-tile {
+        
+        padding: 10px 14px 18px 14px;
+        background: #fff;
+        box-shadow: 0 6px 24px #b4cde933;
+        .challenge-tile__bookbutton {
+          width: 100%;
+          font-size: 1.12rem;
+        }
+      }
+    }
+    .challenges_mainbuttons {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 30%;
+      align-items: center;
+      gap: 30px;
+      .gglobal__button_onsite,
+      .gglobal__button_insitu {  
+        align-self: center;
+      }
+      .gglobal__button_insitu {
+        order:1;
+      }
+      .gglobal__button_onsite {
+        background: $primary-red;
+        color: $text-light;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // STORY 
+  .story {
+    padding: 44px 0 48px 0;
+    max-height: 400px;
+    .story--content_text {
+      max-width: 600px;
+      margin: 34px auto 52px auto;
+      font-size: 2.13rem;
+      line-height: 1.3;
+      text-align: center;
+    }
+    .story--content_button {
+      margin: 0 auto;
+      display: block;
+      width: 350px;
+      height: 58px;
+      font-size: 1.13rem;   
+    }
+  }
+
+  // CALL TO ACTION
+  .calltoaction {
+    display: block;
+    padding-bottom: 0;
+    .calltoaction_onsite {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+      max-height: 800px;
+      img {
+        margin:0;
+        min-width: 450px;
+        min-height: 400px;
+        grid-column: 1;
+      }
+      .calltoaction_textandbutton {
+        grid-column: 2;
+        padding: 10%;
+      }
+      h2 {
+        font-size: 1.38rem;
+        margin: 4px 10px 20px 10px;
+      }
+      p { font-size: 1.05rem; }
+      button { 
+        margin-left: 18px; margin-right: 42px; font-size: 1.05rem; 
+      }
+    }
+    .calltoaction_allchallenge {
+      display:grid;
+      padding: 0;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+      max-height: 800px;
+      img {
+        margin:0;
+        min-width: 450px;
+        min-height: 400px;
+        grid-column: 2;
+      }
+      .calltoaction_textandbutton2 {
+        grid-column: 1;
+        grid-row: 1;
+        padding:10%;
+      
+      h2 {
+        font-size: 1.38rem;
+        margin: 4px 10px 20px 10px;
+      }
+      p { font-size: 1.05rem; }
+      button { 
+        margin-left: 18px; margin-right: 42px; font-size: 1.05rem; 
+      }
+    }}
+  }
+
+  // FOOTER 
+  .footer {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: none;
+    gap: 78px;
+    padding: 38px 60px 24px 60px;
+    align-items: flex-start;
+    .footer_briefinfo { 
+      .footer_briefinfo_title { font-size: 1.19rem; }
+      .footer_briefinfo_description { font-size: 1.02rem; }
+    }
+    .footer_navigations {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+      .footer_navigations_sitemap, .footer_navigations_follow {
+        ul {
+          font-size: 1.03rem;
         }
       }
     }
