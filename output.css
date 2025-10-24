@@ -187,6 +187,7 @@ body {
 }
 .challenges .challenges__grid .challenge-tile .emptystar {
   margin-top: 2px;
+  font-size: 22px;
   color: #E3170A;
 }
 .challenges .challenges__grid .challenge-tile .challenge-tile__participants {
@@ -441,7 +442,6 @@ body {
   }
   .header .header__nav ul li a:hover, .header .header__nav ul li a:focus {
     color: #8ACFE5;
-    text-decoration: underline;
   }
   .hero {
     position: relative;
@@ -494,12 +494,12 @@ body {
     margin: 40px 0 34px 0;
   }
   .testimonials .testimonial__content img.testimonials_image {
-    width: 54px;
-    height: 54px;
+    width: 108px;
+    height: 108px;
     margin-bottom: 0;
   }
   .testimonials .testimonial__content .testimonials__quote {
-    font-size: 1.21rem;
+    font-size: 1.5rem;
     margin: 0;
   }
   .testimonials .testimonial__content .testimonials__quote__date {
@@ -525,15 +525,20 @@ body {
   .challenges .challenges__grid .challenge-tile {
     padding: 10px 14px 18px 14px;
     background: #fff;
-    box-shadow: 0 6px 24px rgba(180, 205, 233, 0.2);
+    box-shadow: 0 1px 1px #B6BDB5;
+  }
+  .challenges .challenges__grid .challenge-tile:hover, .challenges .challenges__grid .challenge-tile:focus {
+    cursor: pointer;
+    box-shadow: 0 2px 2px 2px #B6BDB5;
   }
   .challenges .challenges__grid .challenge-tile .challenge-tile__bookbutton {
     width: 100%;
     font-size: 1.12rem;
+    justify-self: center;
   }
   .challenges .challenges_mainbuttons {
     flex-direction: row;
-    margin: 0;
+    margin: 0 0 20px 0;
     width: auto;
     justify-content: center;
     gap: 30px;

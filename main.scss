@@ -1,3 +1,5 @@
+//variables.scss
+
 $primary-bg: #011827;
 $accent-blue: #8ACFE5;
 $accent-light: #B6BDB5;
@@ -199,6 +201,7 @@ body {
       }
       .emptystar {
         margin-top: 2px;
+        font-size: 22px;
         color: $primary-red;
         
       }
@@ -460,7 +463,7 @@ body {
             text-decoration: none;
             &:hover, &:focus { 
               color: $accent-blue;
-              text-decoration: underline;
+              
               
             }
           }
@@ -527,12 +530,12 @@ body {
     margin: 40px 0 34px 0;
     .testimonial__content {  
       img.testimonials_image {
-        width: 54px;
-        height: 54px;
+        width: 108px;
+        height:108px;
         margin-bottom: 0;
       }
       .testimonials__quote {
-        font-size: 1.21rem;
+        font-size: 1.5rem;
         margin: 0;
       }
       .testimonials__quote__date {
@@ -561,26 +564,27 @@ body {
         
         padding: 10px 14px 18px 14px;
         background: #fff;
-        box-shadow: 0 6px 24px #b4cde933;
+        box-shadow: 0 1px 1px $accent-light;
+        &:hover, &:focus { 
+          cursor: pointer;
+          
+          box-shadow: 0 2px 2px 2px $accent-light;
+        }
         .challenge-tile__bookbutton {
           width: 100%;
           font-size: 1.12rem;
+          justify-self: center;
         }
       }
     }
     .challenges_mainbuttons {
       
       flex-direction: row;
-      margin: 0;
+      margin: 0 0 20px 0;
       width:auto;
       justify-content: center;
       gap: 30px;
       min-width: 50%;
-      
-      
-      
-      
-      
       .gglobal__button_insitu {
         order:1;
         min-width: 240px;
