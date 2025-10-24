@@ -280,9 +280,11 @@ body {
   color: $text-light;
   padding: 26px 12px 20px 12px;
   height: 500px;
+  width: 100%;
     .story--content_text {
       font-size: 1.7em;
       text-align: center;
+      justify-self: center;
       margin: 30px 15px 100px 15px;
       line-height: 1.35;
       font-weight: 100;
